@@ -1,0 +1,14 @@
+
+<aura:component controller="LightningSharing" implements="lightning:isUrlAddressable, force:hasRecordId,lightning:availableForFlowScreens">
+	<!-- call init to get get the recordId out of pageRef and into the aura:attribute -->
+	<aura:handler name="init" value="{!this}" action="{!c.newInit}" />
+	<aura:handler name="change" value="{!v.pageReference}" action="{!c.newInit}" />
+
+	<aura:attribute name="recordId" type="String" />
+	<lightning:navigation aura:id="navService"/>
+	<!-- temporary place for an LWC until they are supported with isUrlAddressable -->
+	<!-- <ltngsharing:lightningSharingWrapper recordId="{!v.recordId}"/> -->
+
+  Foo!
+
+</aura:component>
