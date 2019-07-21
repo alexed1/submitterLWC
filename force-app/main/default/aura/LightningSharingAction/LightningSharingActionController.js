@@ -4,7 +4,7 @@
 		component.find('navService').navigate({
 			type: 'standard__component',
 			attributes: {
-				componentName: 'LightningSharing'
+				componentName: 'oldAuraSharingWrapper'
 			},
 			state: {
 				'recordId': component.get('v.recordId')

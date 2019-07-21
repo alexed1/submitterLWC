@@ -9,14 +9,14 @@
             "c/existingShares": [
                 "existingShares/existingShares.js"
             ],
-            "c/lightningSharingWrapper": [
-                "lightningSharingWrapper/lightningSharingWrapper.js"
-            ],
             "c/lwcLogger": [
                 "lwcLogger/lwcLogger.js"
             ],
             "c/sharingButtonSupport": [
                 "sharingButtonSupport/sharingButtonSupport.js"
+            ],
+            "c/submitterWrapperLWC": [
+                "submitterWrapperLWC/submitterWrapperLWC.js"
             ]
         }
     },
