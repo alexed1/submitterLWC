@@ -67,7 +67,7 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>AddNewPermission</shortDescription>
-        <value>Add New Permission</value>
+        <value>Add New Submitter</value>
     </labels>
     <labels>
         <fullName>Name</fullName>
@@ -163,7 +163,7 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>ViewCurrentPermissions</shortDescription>
-        <value>View/Edit Current Permissions</value>
+        <value>View/Edit Current Submitters</value>
     </labels>
     <labels>
         <fullName>SetAccessLevel</fullName>

@@ -51,6 +51,7 @@ global without sharing class LightningSharing {
 	@AuraEnabled
 	global static String upsertPerm (Id UserOrGroupID, Id recordId, String level){
 
+		System.debug('entering upsertPerm');
 		Schema.DescribeSObjectResult describe = getSharingDescribe(recordId);
 		level = String.escapeSingleQuotes(level);
 
@@ -134,6 +135,7 @@ global without sharing class LightningSharing {
 		//Bobby Tables says always sanitize your inputs.
 		searchString = String.escapeSingleQuotes(searchString);
 		objectType = String.escapeSingleQuotes(objectType);
+		System.debug('search string is: ' + searchString);
 
 		//check CRUD/FLS
 		//what object is this?
@@ -335,7 +337,10 @@ global static String getSharings(Id recordId){
 	private static schema.DescribeSObjectResult getSharingDescribe (Id recordId){
 		try{
 			String sharingName = getSharingTableName(objectTypeFromId(recordId));
-			return Schema.getGlobalDescribe().get(sharingName).getDescribe();
+			System.debug('sharingName in getSharingDescribe is: ' + sharingName);
+			schema.DescribeSObjectResult curResult = Schema.getGlobalDescribe().get(sharingName).getDescribe();
+			System.debug('global describe in getSharingDescribe is: ' + curResult);
+			return curResult;
 		} catch (exception e){
 			//probably means they don't have sharing turned on for this object
 			throw new AuraHandledException(Label.OWDReadWrite);
